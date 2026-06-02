@@ -1,0 +1,14 @@
+node_modules/
+client/node_modules/
+client/dist/
+uploads/*
+!uploads/.gitkeep
+.env
+client/.env
+*.log
+.DS_Store
+firebase-service-account.json
+*-firebase-adminsdk-*.json
+serviceAccountKey.json
+.vite/
+*.local

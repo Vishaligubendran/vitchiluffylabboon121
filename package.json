@@ -1,0 +1,56 @@
+{
+  "name": "247-shop-auth-backend",
+  "version": "1.0.0",
+  "description": "247 Shop Authentication and User Management System",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "client": "npm run dev --prefix client",
+    "client:build": "npm run build --prefix client",
+    "dev:all": "npm run dev & npm run client",
+    "restart": "node scripts/restartDev.js",
+    "setup": "npm install && npm install --prefix client && node -e \"require('fs').mkdirSync('uploads',{recursive:true})\"",
+    "seed:admin": "node scripts/seedAdmin.js",
+    "seed:admin:rotate": "node scripts/seedAdmin.js --rotate-pin",
+    "check:firebase": "node scripts/checkFirebase.js",
+    "google:setup": "node scripts/printGoogleSetup.js",
+    "google:set": "node scripts/setGoogleClientId.js",
+    "google:sync": "node scripts/syncGoogleFromFirebase.js",
+    "google:fix-origins": "node scripts/fixGoogleOrigins.js",
+    "email:test": "node scripts/testEmail.js",
+    "email:setup": "node scripts/printEmailSetup.js",
+    "email:install": "node scripts/setupEmailAuto.js",
+    "email:configure": "node scripts/setupEmailAuto.js --smtp",
+    "email:verify-gmail": "node scripts/verifyGmail.js",
+    "test": "node --test tests/**/*.test.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "express",
+    "firebase",
+    "firestore",
+    "authentication"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-validator": "^7.2.1",
+    "firebase-admin": "^13.0.2",
+    "google-auth-library": "^10.6.2",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^8.0.10",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9",
+    "supertest": "^7.2.2"
+  }
+}

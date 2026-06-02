@@ -1,0 +1,63 @@
+.pin-input-wrap {
+  position: relative;
+  cursor: text;
+}
+
+.pin-boxes {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pin-box {
+  width: 44px;
+  height: 52px;
+  border: 2px solid #d1d5db;
+  border-radius: 10px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1e3a5f;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  user-select: none;
+}
+
+.pin-box-active {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.pin-box-filled {
+  border-color: #93c5fd;
+  background: #f8fafc;
+}
+
+.pin-hidden-input {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: text;
+  border: none;
+  background: transparent;
+  color: transparent;
+  caret-color: transparent;
+  z-index: 1;
+}
+
+@media (max-width: 420px) {
+  .pin-boxes {
+    gap: 6px;
+  }
+
+  .pin-box {
+    width: 36px;
+    height: 46px;
+    font-size: 18px;
+  }
+}
